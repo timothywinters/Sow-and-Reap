@@ -16,6 +16,7 @@
 @property NSTimer *waterDepletionRate;
 @property int waterLevel;
 @property (nonatomic, strong) NSMutableArray *plants;
+@property int Money;
 
 @end
 
@@ -27,6 +28,7 @@
 @property (nonatomic, strong) SKLabelNode *Water;
 @property (nonatomic, strong) SKLabelNode *Plant_Seeds;
 @property (nonatomic, strong) SKLabelNode *Harvest;
+@property (nonatomic, strong) SKLabelNode *Income;
 
 @end
 

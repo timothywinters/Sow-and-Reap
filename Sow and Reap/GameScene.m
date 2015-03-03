@@ -15,9 +15,12 @@
         isWatering = false;
         isPlanting = false;
         isHarvesting = false;
-        
+        _Money = 0;
         self.plants = [NSMutableArray array];
-        
+        self.Income = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
+        self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
+        self.Income.fontSize = 15;
+        self.Income.position = CGPointMake(200, 175);
         self.Water =[SKLabelNode labelNodeWithFontNamed:@"Arial"];
         self.Water.text = @"Water";
         self.Water.fontSize = 15;
@@ -46,6 +49,7 @@
         [self addChild:self.Water];
         [self addChild:self.Plant_Seeds];
         [self addChild:self.Harvest];
+        [self addChild:self.Income];
     }
     return self;
 }
@@ -85,6 +89,8 @@
             if (isHarvesting) {
                 Tomato *tomato =(Tomato *)touchedNode;
                 [tomato Harvest_Plant];
+                tomato.removeFromParent;
+                _Money +=20;
                 isHarvesting = FALSE;
             }
             if (isPlanting) {
@@ -103,7 +109,10 @@
             NSLog(@"Water Node Touched");
             
         }
+        
     }
+    self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
+
 }
 
 @end
