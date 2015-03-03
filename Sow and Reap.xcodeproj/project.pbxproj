@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		980163E01AA55FEC00E33629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163DF1AA55FEC00E33629 /* main.m */; };
+		980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163E21AA55FEC00E33629 /* AppDelegate.m */; };
+		980163E61AA55FEC00E33629 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163E51AA55FEC00E33629 /* GameScene.m */; };
+		980163E81AA55FEC00E33629 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 980163E71AA55FEC00E33629 /* GameScene.sks */; };
+		980163EB1AA55FEC00E33629 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163EA1AA55FEC00E33629 /* GameViewController.m */; };
+		980163EE1AA55FEC00E33629 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980163EC1AA55FEC00E33629 /* Main.storyboard */; };
+		980163F01AA55FEC00E33629 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980163EF1AA55FEC00E33629 /* Images.xcassets */; };
+		980163F31AA55FEC00E33629 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980163F11AA55FEC00E33629 /* LaunchScreen.xib */; };
+		980163FF1AA55FEC00E33629 /* Sow_and_ReapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163FE1AA55FEC00E33629 /* Sow_and_ReapTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		980163F91AA55FEC00E33629 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 980163D21AA55FEC00E33629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 980163D91AA55FEC00E33629;
+			remoteInfo = "Sow and Reap";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		980163DA1AA55FEC00E33629 /* Sow and Reap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sow and Reap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		980163DE1AA55FEC00E33629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		980163DF1AA55FEC00E33629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		980163E11AA55FEC00E33629 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		980163E21AA55FEC00E33629 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		980163E41AA55FEC00E33629 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		980163E51AA55FEC00E33629 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		980163E71AA55FEC00E33629 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		980163E91AA55FEC00E33629 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		980163EA1AA55FEC00E33629 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		980163ED1AA55FEC00E33629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		980163EF1AA55FEC00E33629 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		980163F21AA55FEC00E33629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		980163F81AA55FEC00E33629 /* Sow and ReapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sow and ReapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		980163FD1AA55FEC00E33629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		980163FE1AA55FEC00E33629 /* Sow_and_ReapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sow_and_ReapTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		980163D71AA55FEC00E33629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		980163F51AA55FEC00E33629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		980163D11AA55FEC00E33629 = {
+			isa = PBXGroup;
+			children = (
+				980163DC1AA55FEC00E33629 /* Sow and Reap */,
+				980163FB1AA55FEC00E33629 /* Sow and ReapTests */,
+				980163DB1AA55FEC00E33629 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		980163DB1AA55FEC00E33629 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				980163DA1AA55FEC00E33629 /* Sow and Reap.app */,
+				980163F81AA55FEC00E33629 /* Sow and ReapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		980163DC1AA55FEC00E33629 /* Sow and Reap */ = {
+			isa = PBXGroup;
+			children = (
+				980163E11AA55FEC00E33629 /* AppDelegate.h */,
+				980163E21AA55FEC00E33629 /* AppDelegate.m */,
+				980163E41AA55FEC00E33629 /* GameScene.h */,
+				980163E51AA55FEC00E33629 /* GameScene.m */,
+				980163E71AA55FEC00E33629 /* GameScene.sks */,
+				980163E91AA55FEC00E33629 /* GameViewController.h */,
+				980163EA1AA55FEC00E33629 /* GameViewController.m */,
+				980163EC1AA55FEC00E33629 /* Main.storyboard */,
+				980163EF1AA55FEC00E33629 /* Images.xcassets */,
+				980163F11AA55FEC00E33629 /* LaunchScreen.xib */,
+				980163DD1AA55FEC00E33629 /* Supporting Files */,
+			);
+			path = "Sow and Reap";
+			sourceTree = "<group>";
+		};
+		980163DD1AA55FEC00E33629 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				980163DE1AA55FEC00E33629 /* Info.plist */,
+				980163DF1AA55FEC00E33629 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		980163FB1AA55FEC00E33629 /* Sow and ReapTests */ = {
+			isa = PBXGroup;
+			children = (
+				980163FE1AA55FEC00E33629 /* Sow_and_ReapTests.m */,
+				980163FC1AA55FEC00E33629 /* Supporting Files */,
+			);
+			path = "Sow and ReapTests";
+			sourceTree = "<group>";
+		};
+		980163FC1AA55FEC00E33629 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				980163FD1AA55FEC00E33629 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		980163D91AA55FEC00E33629 /* Sow and Reap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 980164021AA55FEC00E33629 /* Build configuration list for PBXNativeTarget "Sow and Reap" */;
+			buildPhases = (
+				980163D61AA55FEC00E33629 /* Sources */,
+				980163D71AA55FEC00E33629 /* Frameworks */,
+				980163D81AA55FEC00E33629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sow and Reap";
+			productName = "Sow and Reap";
+			productReference = 980163DA1AA55FEC00E33629 /* Sow and Reap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		980163F71AA55FEC00E33629 /* Sow and ReapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 980164051AA55FEC00E33629 /* Build configuration list for PBXNativeTarget "Sow and ReapTests" */;
+			buildPhases = (
+				980163F41AA55FEC00E33629 /* Sources */,
+				980163F51AA55FEC00E33629 /* Frameworks */,
+				980163F61AA55FEC00E33629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				980163FA1AA55FEC00E33629 /* PBXTargetDependency */,
+			);
+			name = "Sow and ReapTests";
+			productName = "Sow and ReapTests";
+			productReference = 980163F81AA55FEC00E33629 /* Sow and ReapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		980163D21AA55FEC00E33629 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Timothy Winters";
+				TargetAttributes = {
+					980163D91AA55FEC00E33629 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					980163F71AA55FEC00E33629 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 980163D91AA55FEC00E33629;
+					};
+				};
+			};
+			buildConfigurationList = 980163D51AA55FEC00E33629 /* Build configuration list for PBXProject "Sow and Reap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 980163D11AA55FEC00E33629;
+			productRefGroup = 980163DB1AA55FEC00E33629 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				980163D91AA55FEC00E33629 /* Sow and Reap */,
+				980163F71AA55FEC00E33629 /* Sow and ReapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		980163D81AA55FEC00E33629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				980163F31AA55FEC00E33629 /* LaunchScreen.xib in Resources */,
+				980163F01AA55FEC00E33629 /* Images.xcassets in Resources */,
+				980163E81AA55FEC00E33629 /* GameScene.sks in Resources */,
+				980163EE1AA55FEC00E33629 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		980163F61AA55FEC00E33629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		980163D61AA55FEC00E33629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				980163EB1AA55FEC00E33629 /* GameViewController.m in Sources */,
+				980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */,
+				980163E61AA55FEC00E33629 /* GameScene.m in Sources */,
+				980163E01AA55FEC00E33629 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		980163F41AA55FEC00E33629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				980163FF1AA55FEC00E33629 /* Sow_and_ReapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		980163FA1AA55FEC00E33629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 980163D91AA55FEC00E33629 /* Sow and Reap */;
+			targetProxy = 980163F91AA55FEC00E33629 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		980163EC1AA55FEC00E33629 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				980163ED1AA55FEC00E33629 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		980163F11AA55FEC00E33629 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				980163F21AA55FEC00E33629 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		980164001AA55FEC00E33629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		980164011AA55FEC00E33629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		980164031AA55FEC00E33629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sow and Reap/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		980164041AA55FEC00E33629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sow and Reap/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		980164061AA55FEC00E33629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sow and ReapTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sow and Reap.app/Sow and Reap";
+			};
+			name = Debug;
+		};
+		980164071AA55FEC00E33629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sow and ReapTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sow and Reap.app/Sow and Reap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		980163D51AA55FEC00E33629 /* Build configuration list for PBXProject "Sow and Reap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				980164001AA55FEC00E33629 /* Debug */,
+				980164011AA55FEC00E33629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		980164021AA55FEC00E33629 /* Build configuration list for PBXNativeTarget "Sow and Reap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				980164031AA55FEC00E33629 /* Debug */,
+				980164041AA55FEC00E33629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		980164051AA55FEC00E33629 /* Build configuration list for PBXNativeTarget "Sow and ReapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				980164061AA55FEC00E33629 /* Debug */,
+				980164071AA55FEC00E33629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 980163D21AA55FEC00E33629 /* Project object */;
+}
