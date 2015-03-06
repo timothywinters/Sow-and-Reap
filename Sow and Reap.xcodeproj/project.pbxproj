@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C0CDD1AA950FA00F7104D /* TopMenuView.m */; };
+		845C0CE11AA950FA00F7104D /* SideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C0CDF1AA950FA00F7104D /* SideMenuView.m */; };
 		980163E01AA55FEC00E33629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163DF1AA55FEC00E33629 /* main.m */; };
 		980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163E21AA55FEC00E33629 /* AppDelegate.m */; };
 		980163E61AA55FEC00E33629 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163E51AA55FEC00E33629 /* GameScene.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845C0CDC1AA950FA00F7104D /* TopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuView.h; sourceTree = "<group>"; };
+		845C0CDD1AA950FA00F7104D /* TopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuView.m; sourceTree = "<group>"; };
+		845C0CDE1AA950FA00F7104D /* SideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuView.h; sourceTree = "<group>"; };
+		845C0CDF1AA950FA00F7104D /* SideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuView.m; sourceTree = "<group>"; };
 		980163DA1AA55FEC00E33629 /* Sow and Reap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sow and Reap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		980163DE1AA55FEC00E33629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		980163DF1AA55FEC00E33629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +107,10 @@
 		980163DC1AA55FEC00E33629 /* Sow and Reap */ = {
 			isa = PBXGroup;
 			children = (
+				845C0CDC1AA950FA00F7104D /* TopMenuView.h */,
+				845C0CDD1AA950FA00F7104D /* TopMenuView.m */,
+				845C0CDE1AA950FA00F7104D /* SideMenuView.h */,
+				845C0CDF1AA950FA00F7104D /* SideMenuView.m */,
 				9845F68F1AA565370084C66B /* lettuce.jpg */,
 				9845F6901AA565370084C66B /* seeds.jpg */,
 				9845F6911AA565370084C66B /* tomato.jpg */,
@@ -258,7 +268,9 @@
 				980163EB1AA55FEC00E33629 /* GameViewController.m in Sources */,
 				9845F69C1AA565370084C66B /* Tomato.m in Sources */,
 				9845F69D1AA565370084C66B /* Lettuce.m in Sources */,
+				845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */,
 				980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */,
+				845C0CE11AA950FA00F7104D /* SideMenuView.m in Sources */,
 				980163E61AA55FEC00E33629 /* GameScene.m in Sources */,
 				980163E01AA55FEC00E33629 /* main.m in Sources */,
 				9845F69B1AA565370084C66B /* plant.m in Sources */,
