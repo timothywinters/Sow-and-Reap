@@ -21,10 +21,9 @@
         [self addChild:menu];
         
         NSLog(@"Size: %@", NSStringFromCGSize(size));
-        isWatering = false;
-        isPlanting = false;
-        isHarvesting = false;
         _Money = 0;
+        self.mode = -1;
+        self.plant_Type = 0;
         self.plants = [NSMutableArray array];
         self.Income = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
         self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
@@ -74,6 +73,9 @@
         CGPoint location = [touch locationInNode:self];
         SKNode *touchedNode = [self nodeAtPoint:location];
         //NSLog(@"%@", touchedNode);
+        NSLog(@"%li", (long)self.mode);
+        NSLog(@"%@", touchedNode);
+        NSLog(@"%ld", (long)self.plant_Type);
         if ([touchedNode.name isEqualToString:@"menuLabel"]) {
             if (topMenuView) {
                 [topMenuView hideMenu];
@@ -92,56 +94,80 @@
             
         } else {
             
+            if (self.mode != -1) {
+            
             if ([touchedNode.name isEqualToString:@"Lettuce"]) {
                 NSLog(@"Lettuce plant touched");
-                if(isWatering) {
+                if(self.mode ==1) {
                     Lettuce  *lettuce = (Lettuce *)touchedNode;
                     [lettuce AddWater];
-                    isWatering = FALSE;
                 }
-                if (isHarvesting) {
+                if (self.mode ==2) {
                     Lettuce *lettuce = (Lettuce *)touchedNode;
                     [lettuce Harvest_Plant];
-                    isHarvesting = FALSE;
+                    lettuce.removeFromParent;
+                    _Money +=10;
                     
                 }
                 
-                if (isPlanting) {
+                if (self.mode ==0) {
                     Lettuce *lettuce = (Lettuce *)touchedNode;
                     [lettuce Plant_Seeds];
-                    isPlanting = FALSE;
+                    
+                    
                 }
             }  else if ([touchedNode.name isEqualToString:@"Tomato"]) {
                 NSLog(@"Tomato plant touched");
-                if(isWatering) {
+                if(self.mode ==1) {
                     Tomato *tomato = (Tomato *)touchedNode;
                     [tomato AddWater];
-                    isWatering = FALSE;
                 }
-                if (isHarvesting) {
+                if (self.mode ==2) {
                     Tomato *tomato =(Tomato *)touchedNode;
                     [tomato Harvest_Plant];
                     tomato.removeFromParent;
                     _Money +=20;
-                    isHarvesting = FALSE;
                 }
-                if (isPlanting) {
+                if (self.mode ==0) {
                     Tomato *tomato = (Tomato *)touchedNode;
                     [tomato Plant_Seeds];
-                    isPlanting = FALSE;
                 }
-            } else if ([touchedNode.name isEqualToString:@"HarvestNode"]) {
-                isHarvesting = TRUE;
-                NSLog(@"Harvest Node Touched");
-            } else if ([touchedNode.name isEqualToString:@"SeedsNode"]) {
-                isPlanting = TRUE;
-                NSLog(@"Seeds Node Touched");
-            } else if ([touchedNode.name isEqualToString:@"WaterNode"]) {
-                isWatering = TRUE;
-                NSLog(@"Water Node Touched");
+                
+                
+//            } else if ([touchedNode.name isEqualToString:@"HarvestNode"]) {
+//                isHarvesting = TRUE;
+//                NSLog(@"Harvest Node Touched");
+//            } else if ([touchedNode.name isEqualToString:@"SeedsNode"]) {
+//                isPlanting = TRUE;
+//                NSLog(@"Seeds Node Touched");
+//            } else if ([touchedNode.name isEqualToString:@"WaterNode"]) {
+//                isWatering = TRUE;
+//                NSLog(@"Water Node Touched");
+                
+            }else if (self.mode ==0 && _Money > 0) {
+                switch (self.plant_Type) {
+                    case 0:
+                    {
+                        Tomato *tomato = [Tomato new];
+                        tomato.position = location;
+                        _Money -=10;
+                        [self addChild:tomato];
+                    }
+                        break;
+                    case 1:
+                    {
+                        Lettuce *lettuce = [Lettuce new];
+                        lettuce.position = location;
+                        _Money -=10;
+                        [self addChild:lettuce];
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }
                 
             }
-            
         }
         self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
     }
@@ -174,7 +200,7 @@
 #pragma -mark
 #pragma TopMenu delegate
 -(void)didSelectPlantType:(NSInteger)plantType {
-    //Do something depsending on what type of plant was selected
+    self.plant_Type = plantType;
     NSLog(@"selected plant type %li", (long)plantType);
     [topMenuView hideMenu];
     topMenuView = nil;

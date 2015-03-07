@@ -38,6 +38,7 @@
 
 //This gets set to a specific mode (number) when plant, water, or harvest is set
 @property (nonatomic) NSInteger mode;
+@property (nonatomic) NSInteger plant_Type;
 
 @end
 
