@@ -11,10 +11,12 @@
 #import "Lettuce.h"
 #import "SideMenuView.h"
 #import "TopMenuView.h"
-@interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate> {
+#import "StoreMenuView.h"
+@interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate, StoreMenuDelegate> {
     
     SideMenuView *sideMenuView;
     TopMenuView *topMenuView;
+    StoreMenuView *storeMenuView;
 }
 @property (nonatomic) SKNode  *field;
 @property (nonatomic) Tomato *plant;
@@ -23,6 +25,7 @@
 @property int waterLevel;
 @property (nonatomic, strong) NSMutableArray *plants;
 @property int Money;
+
 
 @end
 
@@ -39,6 +42,10 @@
 //This gets set to a specific mode (number) when plant, water, or harvest is set
 @property (nonatomic) NSInteger mode;
 @property (nonatomic) NSInteger plant_Type;
+@property (nonatomic) NSInteger tomato_seeds;
+@property (nonatomic) NSInteger lettuce_seeds;
+@property (nonatomic) NSInteger Seed_Type;
+
 
 @end
 

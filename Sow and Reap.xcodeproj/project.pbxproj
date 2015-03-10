@@ -24,6 +24,7 @@
 		9845F69B1AA565370084C66B /* plant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9845F6931AA565370084C66B /* plant.m */; };
 		9845F69C1AA565370084C66B /* Tomato.m in Sources */ = {isa = PBXBuildFile; fileRef = 9845F6951AA565370084C66B /* Tomato.m */; };
 		9845F69D1AA565370084C66B /* Lettuce.m in Sources */ = {isa = PBXBuildFile; fileRef = 9845F6971AA565370084C66B /* Lettuce.m */; };
+		985D94151AAE52910015B0CD /* StoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 985D94141AAE52910015B0CD /* StoreMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		9845F6951AA565370084C66B /* Tomato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomato.m; sourceTree = "<group>"; };
 		9845F6961AA565370084C66B /* Lettuce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lettuce.h; sourceTree = "<group>"; };
 		9845F6971AA565370084C66B /* Lettuce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lettuce.m; sourceTree = "<group>"; };
+		985D94131AAE52910015B0CD /* StoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreMenuView.h; sourceTree = "<group>"; };
+		985D94141AAE52910015B0CD /* StoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				980163EF1AA55FEC00E33629 /* Images.xcassets */,
 				980163F11AA55FEC00E33629 /* LaunchScreen.xib */,
 				980163DD1AA55FEC00E33629 /* Supporting Files */,
+				985D94131AAE52910015B0CD /* StoreMenuView.h */,
+				985D94141AAE52910015B0CD /* StoreMenuView.m */,
 			);
 			path = "Sow and Reap";
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				9845F69D1AA565370084C66B /* Lettuce.m in Sources */,
 				845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */,
 				980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */,
+				985D94151AAE52910015B0CD /* StoreMenuView.m in Sources */,
 				845C0CE11AA950FA00F7104D /* SideMenuView.m in Sources */,
 				980163E61AA55FEC00E33629 /* GameScene.m in Sources */,
 				980163E01AA55FEC00E33629 /* main.m in Sources */,

@@ -16,7 +16,7 @@
         self.name = @"Lettuce";
         self.waterLevel = 40;
         self.stage = 0;
-        self.waterDepletionRate = [NSTimer timerWithTimeInterval:20 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
+        self.waterDepletionRate = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:self.waterDepletionRate forMode:NSDefaultRunLoopMode];
     }
     return self;

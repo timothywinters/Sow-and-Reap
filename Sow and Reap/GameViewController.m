@@ -30,6 +30,14 @@
 
 @implementation GameViewController
 
+-(void)viewDidLoad {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(Show_Levels:) name:@"waterLevel" object:nil];
+}
+
+- (void)Show_Levels:(NSNotification *)notifcation {
+    plant *thisPlant = (plant *)notifcation.object;
+    NSLog(@"Water level = %d", thisPlant.waterLevel);
+}
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];

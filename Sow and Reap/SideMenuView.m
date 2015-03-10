@@ -30,7 +30,7 @@
 
         
         
-        UIButton *button1 = [[UIButton alloc] initWithFrame: CGRectMake(10, 40, 80, 80)];
+        UIButton *button1 = [[UIButton alloc] initWithFrame: CGRectMake(10, 40, 60, 60)];
         
         [button1 setTitle: @"Seeds" forState: UIControlStateNormal];
         
@@ -42,7 +42,7 @@
         
         
         
-        UIButton *button2 = [[UIButton alloc] initWithFrame: CGRectMake(10, 125, 80, 80)];
+        UIButton *button2 = [[UIButton alloc] initWithFrame: CGRectMake(10, 100, 60, 60)];
         
         [button2 setTitle: @"Water" forState: UIControlStateNormal];
         
@@ -56,7 +56,7 @@
         
         
         
-        UIButton *button3 = [[UIButton alloc] initWithFrame: CGRectMake(10, 210, 80, 80)];
+        UIButton *button3 = [[UIButton alloc] initWithFrame: CGRectMake(10, 160, 60, 60)];
         
         [button3 setTitle: @"Harvest" forState: UIControlStateNormal];
         [button3 setBackgroundColor:[UIColor redColor]];
@@ -64,6 +64,15 @@
         [button3 addTarget:self action:@selector(btn3Clicked:)
           forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button3];
+        
+        UIButton *button4 = [[UIButton alloc] initWithFrame: CGRectMake(10, 220, 60, 60)];
+        
+        [button4 setTitle: @"Store" forState: UIControlStateNormal];
+        [button4 setBackgroundColor:[UIColor whiteColor]];
+        [button4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button4 addTarget:self action:@selector(btn4Clicked:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button4];
+        
         
         
 
@@ -102,6 +111,10 @@
     //We need to set a variable to state we are in harvesting mode
     [self.delegate didSelectGameMode:2];
 
+}
+         
+-(void)btn4Clicked:(id)sender {
+    [self.delegate didSelectGameMode:3];
 }
 
 @end

@@ -30,25 +30,25 @@
 
         
         
-        UIButton *button1 = [[UIButton alloc] initWithFrame: CGRectMake(40, 40, 80, 80)];
+        self.button1 = [[UIButton alloc] initWithFrame: CGRectMake(40, 40, 80, 80)];
+        [self.button1.titleLabel setFont:[UIFont systemFontOfSize:10]];
+        [self.button1 setTitle: @"Lettuce" forState: UIControlStateNormal];
+        [self.button1 setBackgroundColor:[UIColor blueColor]];
         
-        [button1 setTitle: @"Lettuce" forState: UIControlStateNormal];
-        
-        [button1 setBackgroundColor:[UIColor blueColor]];
-        
-        [button1 addTarget:self action:@selector(btn1Clicked:)
+        [self.button1 addTarget:self action:@selector(btn1Clicked:)
          forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:button1];
+        [self addSubview:self.button1];
         
         
         
-        UIButton *button2 = [[UIButton alloc] initWithFrame: CGRectMake(180, 40, 80, 80)];
-        [button2 setTitle: @"Tomatoe" forState: UIControlStateNormal];
-        [button2 setBackgroundColor:[UIColor brownColor]];
+        self.button2 = [[UIButton alloc] initWithFrame: CGRectMake(180, 40, 80, 80)];
+        [self.button2.titleLabel setFont:[UIFont systemFontOfSize:10]];
+        [self.button2 setTitle: @"Tomatoe" forState: UIControlStateNormal];
+        [self.button2 setBackgroundColor:[UIColor brownColor]];
 
-        [button2 addTarget:self action:@selector(btn2Clicked:)
+        [self.button2 addTarget:self action:@selector(btn2Clicked:)
           forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:button2];
+        [self addSubview:self.button2];
 
     }
     
@@ -56,7 +56,13 @@
 }
 
 -(void) showMenu {
+    NSString *string1 = [NSString stringWithFormat:@"Lettuce %li", (long)self.lettuce_seeds];
+    NSString *string2 = [NSString stringWithFormat:@"Tomato %li", (long)self.tomato_seeds];
     
+    [self.button1 setTitle: string1 forState: UIControlStateNormal];
+
+    [self.button2 setTitle: string2 forState: UIControlStateNormal];
+
     [UIView animateWithDuration:.25 animations:^{
         self.center = CGPointMake(self.center.x, self.frame.size.height/2);
     }];

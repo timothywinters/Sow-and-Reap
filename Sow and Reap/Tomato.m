@@ -16,7 +16,7 @@
         self.waterLevel = 60;
         self.stage = 0;
         counter = 0;
-        self.waterDepletionRate = [NSTimer timerWithTimeInterval:20 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
+        self.waterDepletionRate = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
                [[NSRunLoop mainRunLoop] addTimer:self.waterDepletionRate forMode:NSDefaultRunLoopMode];
             }
     return self;
@@ -28,7 +28,6 @@
     counter++;
     if(self.waterLevel >=150) {
         self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"tomato.jpg"]];
-        NSLog(@"Your plant is doing well");
         self.stage = 1;
         NSLog(@"Stage is %i", self.stage);
     }
@@ -36,7 +35,7 @@
         NSLog(@"Tomato plant is growing and needs water");
     self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"micro-greenery.jpg"]];
     } else if (self.waterLevel <=30 && self.waterLevel > 0) {
-        NSLog(@"Tomato plant is wilting");
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"waterLevel" object:self];
     } else if (self.waterLevel <=0){
         NSLog(@"Tomato plant is dead");
         [self.waterDepletionRate invalidate];
@@ -63,7 +62,6 @@
 -(void)mature_Stage {
     
 }
-
 
 
 

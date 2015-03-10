@@ -7,9 +7,13 @@
 //
 
 #import "GameScene.h"
+#import "StoreMenuView.h"
 @implementation GameScene
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]){
+        
+        self.tomato_seeds = 5;
+        self.lettuce_seeds = 5;
         
         SKLabelNode *menu = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
@@ -21,42 +25,16 @@
         [self addChild:menu];
         
         NSLog(@"Size: %@", NSStringFromCGSize(size));
-        _Money = 0;
+        _Money = 50;
         self.mode = -1;
         self.plant_Type = 0;
+        self.
         self.plants = [NSMutableArray array];
         self.Income = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
         self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
         self.Income.fontSize = 15;
-        self.Income.position = CGPointMake(200, 175);
-        self.Water =[SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        self.Water.text = @"Water";
-        self.Water.fontSize = 15;
-        self.Water.name = @"WaterNode";
-        self.Water.position = CGPointMake(200, 250);
-        
-        self.Plant_Seeds = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-        self.Plant_Seeds.text =@"Plant Seeds";
-        self.Plant_Seeds.fontSize = 15;
-        self.Plant_Seeds.name = @"SeedsNode";
-        self.Plant_Seeds.position = CGPointMake(200, 225);
-        
-        self.Harvest = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        self.Harvest.text =@"Harvest Plants";
-        self.Harvest.fontSize = 15;
-        self.Harvest.name =@"HarvestNode";
-        self.Harvest.position =CGPointMake(200, 200);
-        
+        self.Income.position = CGPointMake(480, 265);
         self.backgroundColor = [SKColor colorWithRed:0.27 green:0.24 blue:0.13 alpha:1.0];
-        self.plant = [Tomato new];
-        self.plant.position = CGPointMake(400, self.plant.size.height/2);
-        self.plant1 = [Lettuce new];
-        self.plant1.position = CGPointMake(300, self.plant1.size.height/2);
-        [self addChild:self.plant1];
-        [self addChild:self.plant];
-        [self addChild:self.Water];
-        [self addChild:self.Plant_Seeds];
-        [self addChild:self.Harvest];
         [self addChild:self.Income];
         
         
@@ -97,7 +75,6 @@
             if (self.mode != -1) {
             
             if ([touchedNode.name isEqualToString:@"Lettuce"]) {
-                NSLog(@"Lettuce plant touched");
                 if(self.mode ==1) {
                     Lettuce  *lettuce = (Lettuce *)touchedNode;
                     [lettuce AddWater];
@@ -117,7 +94,6 @@
                     
                 }
             }  else if ([touchedNode.name isEqualToString:@"Tomato"]) {
-                NSLog(@"Tomato plant touched");
                 if(self.mode ==1) {
                     Tomato *tomato = (Tomato *)touchedNode;
                     [tomato AddWater];
@@ -134,23 +110,14 @@
                 }
                 
                 
-//            } else if ([touchedNode.name isEqualToString:@"HarvestNode"]) {
-//                isHarvesting = TRUE;
-//                NSLog(@"Harvest Node Touched");
-//            } else if ([touchedNode.name isEqualToString:@"SeedsNode"]) {
-//                isPlanting = TRUE;
-//                NSLog(@"Seeds Node Touched");
-//            } else if ([touchedNode.name isEqualToString:@"WaterNode"]) {
-//                isWatering = TRUE;
-//                NSLog(@"Water Node Touched");
-                
-            }else if (self.mode ==0 && _Money > 0) {
+            }else if (self.mode ==0) {
                 switch (self.plant_Type) {
                     case 0:
                     {
                         Tomato *tomato = [Tomato new];
                         tomato.position = location;
-                        _Money -=10;
+                        self.tomato_seeds -=1;
+                        self.mode = -1;
                         [self addChild:tomato];
                     }
                         break;
@@ -158,7 +125,8 @@
                     {
                         Lettuce *lettuce = [Lettuce new];
                         lettuce.position = location;
-                        _Money -=10;
+                        self.lettuce_seeds -=1;
+                        self.mode = -1;
                         [self addChild:lettuce];
                     }
                         break;
@@ -169,7 +137,7 @@
                 
             }
         }
-        self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
+        //self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
     }
     
 }
@@ -184,18 +152,33 @@
     if (self.mode == 0){
         if (!topMenuView) {
             topMenuView = [[TopMenuView alloc] init];
+            topMenuView.tomato_seeds = self.lettuce_seeds;
+            topMenuView.lettuce_seeds = self.tomato_seeds;
             topMenuView.delegate = self;
             [self.view addSubview:topMenuView];
             [topMenuView showMenu];
+            [storeMenuView HideStoreMenu];
             
-        } else {
+        }
+    }  else if(self.mode ==3){
+        
+        if(!storeMenuView) {
+            
+            storeMenuView = [[StoreMenuView alloc] init];
+            storeMenuView.delegate = self;
+            [self.view addSubview:storeMenuView];
+            [storeMenuView ShowStoreMenu];
+        }
+    } else {
             [topMenuView hideMenu];
             topMenuView = nil;
+            [storeMenuView HideStoreMenu];
+            storeMenuView = nil;
         }
     }
-    NSLog(@"selected mode  %li", (long)mode);
+    //NSLog(@"selected mode  %li", (long)mode);
     
-}
+
 
 #pragma -mark
 #pragma TopMenu delegate
@@ -205,4 +188,28 @@
     [topMenuView hideMenu];
     topMenuView = nil;
 }
+
+
+#pragma -mark
+#pragma StoreMenu delegate
+-(void)didSelectSeedType:(NSInteger)seedType {
+    self.Seed_Type = seedType;
+    if (seedType ==0 && _Money >0) {
+        _tomato_seeds +=1;
+        _Money -=10;
+        self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
+
+    } else if (seedType ==1 && _Money >0) {
+        _lettuce_seeds +=1;
+    _Money -=10;
+        self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money]; }
+    
+    [storeMenuView HideStoreMenu ];
+    storeMenuView = nil;
+
+}
+
+
+
+
 @end
