@@ -17,6 +17,8 @@
 @interface SideMenuView : SKView
 @property (nonatomic) BOOL showing;
 @property (nonatomic, retain) id <SideMenuDelegate> delegate;
+@property (nonatomic) NSInteger income;
+@property (nonatomic, retain) UILabel *incomeLabel;
 
 
 -(void) showMenu;

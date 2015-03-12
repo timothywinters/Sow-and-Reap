@@ -14,7 +14,7 @@
         
         self.tomato_seeds = 5;
         self.lettuce_seeds = 5;
-        
+     /*
         SKLabelNode *menu = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
         menu.text = @"Show Menu";
@@ -23,23 +23,65 @@
         menu.position = CGPointMake(self.frame.size.width - menu.frame.size.width/2 - 10,self.frame.size.height - 40);
         
         [self addChild:menu];
-        
+        */
         NSLog(@"Size: %@", NSStringFromCGSize(size));
         _Money = 50;
         self.mode = -1;
         self.plant_Type = 0;
-        self.
         self.plants = [NSMutableArray array];
+        
+        /*
         self.Income = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
         self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
         self.Income.fontSize = 15;
         self.Income.position = CGPointMake(480, 265);
-        self.backgroundColor = [SKColor colorWithRed:0.27 green:0.24 blue:0.13 alpha:1.0];
+
         [self addChild:self.Income];
+         */
+        
+        self.backgroundColor = [SKColor colorWithRed:0.27 green:0.24 blue:0.13 alpha:1.0];
+        
+        self.background = [SKSpriteNode spriteNodeWithImageNamed:@"gridPattern.png"];
+        
+        self.background.name = @"background";
+        
+        self.background.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+        
+        [self addChild:self.background];
+        
+    
+
         
         
     }
     return self;
+}
+
+-(void)didMoveToView:(SKView *)view {
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showMenu)];
+      swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    [view addGestureRecognizer:swipe];
+}
+
+-(void) showMenu {
+    if (topMenuView) {
+        [topMenuView hideMenu];
+    }
+    
+    if (!sideMenuView) {
+        sideMenuView = [[SideMenuView alloc] init];
+        sideMenuView.delegate = self;
+        [self.view addSubview:sideMenuView];
+        NSLog(@"money = %i", _Money);
+        sideMenuView.income = _Money;
+        [sideMenuView showMenu];
+        
+    } else {
+        [sideMenuView hideMenu];
+        sideMenuView = nil;
+    }
 }
 
 -(void)didSwipe {
@@ -54,6 +96,7 @@
         NSLog(@"%li", (long)self.mode);
         NSLog(@"%@", touchedNode);
         NSLog(@"%ld", (long)self.plant_Type);
+     /*
         if ([touchedNode.name isEqualToString:@"menuLabel"]) {
             if (topMenuView) {
                 [topMenuView hideMenu];
@@ -71,9 +114,9 @@
             }
             
         } else {
-            
-            if (self.mode != -1) {
-            
+       */
+        if (self.mode != -1) {
+        
             if ([touchedNode.name isEqualToString:@"Lettuce"]) {
                 if(self.mode ==1) {
                     Lettuce  *lettuce = (Lettuce *)touchedNode;
@@ -134,11 +177,14 @@
                         break;
                 }
             }
-                
-            }
+            
+        } else {
+            
+            //Do something if mode = -1
         }
-        //self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
     }
+        //self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
+   // }
     
 }
 

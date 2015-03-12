@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84528E191AB232D400BF5943 /* PlantStatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84528E181AB232D400BF5943 /* PlantStatisticsView.m */; };
+		84528E1B1AB23A1400BF5943 /* gridPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 84528E1A1AB23A1400BF5943 /* gridPattern.png */; };
 		845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C0CDD1AA950FA00F7104D /* TopMenuView.m */; };
 		845C0CE11AA950FA00F7104D /* SideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C0CDF1AA950FA00F7104D /* SideMenuView.m */; };
 		980163E01AA55FEC00E33629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 980163DF1AA55FEC00E33629 /* main.m */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84528E171AB232D400BF5943 /* PlantStatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantStatisticsView.h; sourceTree = "<group>"; };
+		84528E181AB232D400BF5943 /* PlantStatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantStatisticsView.m; sourceTree = "<group>"; };
+		84528E1A1AB23A1400BF5943 /* gridPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gridPattern.png; sourceTree = "<group>"; };
 		845C0CDC1AA950FA00F7104D /* TopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuView.h; sourceTree = "<group>"; };
 		845C0CDD1AA950FA00F7104D /* TopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuView.m; sourceTree = "<group>"; };
 		845C0CDE1AA950FA00F7104D /* SideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuView.h; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 				9845F6941AA565370084C66B /* Tomato.h */,
 				9845F6951AA565370084C66B /* Tomato.m */,
 				9845F6961AA565370084C66B /* Lettuce.h */,
+				84528E1A1AB23A1400BF5943 /* gridPattern.png */,
 				9845F6971AA565370084C66B /* Lettuce.m */,
 				980163E11AA55FEC00E33629 /* AppDelegate.h */,
 				980163E21AA55FEC00E33629 /* AppDelegate.m */,
@@ -136,6 +142,8 @@
 				980163DD1AA55FEC00E33629 /* Supporting Files */,
 				985D94131AAE52910015B0CD /* StoreMenuView.h */,
 				985D94141AAE52910015B0CD /* StoreMenuView.m */,
+				84528E171AB232D400BF5943 /* PlantStatisticsView.h */,
+				84528E181AB232D400BF5943 /* PlantStatisticsView.m */,
 			);
 			path = "Sow and Reap";
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 				980163E81AA55FEC00E33629 /* GameScene.sks in Resources */,
 				9845F69A1AA565370084C66B /* tomato.jpg in Resources */,
 				9845F6991AA565370084C66B /* seeds.jpg in Resources */,
+				84528E1B1AB23A1400BF5943 /* gridPattern.png in Resources */,
 				980163EE1AA55FEC00E33629 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +283,7 @@
 				9845F69C1AA565370084C66B /* Tomato.m in Sources */,
 				9845F69D1AA565370084C66B /* Lettuce.m in Sources */,
 				845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */,
+				84528E191AB232D400BF5943 /* PlantStatisticsView.m in Sources */,
 				980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */,
 				985D94151AAE52910015B0CD /* StoreMenuView.m in Sources */,
 				845C0CE11AA950FA00F7104D /* SideMenuView.m in Sources */,
