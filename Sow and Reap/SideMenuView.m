@@ -30,7 +30,7 @@
 
         
         
-        UIButton *button1 = [[UIButton alloc] initWithFrame: CGRectMake(10, 40, 60, 60)];
+        UIButton *button1 = [[UIButton alloc] initWithFrame: CGRectMake(20, 38, 60, 60)];
         
         [button1 setTitle: @"Seeds" forState: UIControlStateNormal];
         
@@ -42,7 +42,7 @@
         
         
         
-        UIButton *button2 = [[UIButton alloc] initWithFrame: CGRectMake(10, 100, 60, 60)];
+        UIButton *button2 = [[UIButton alloc] initWithFrame: CGRectMake(20, 98, 60, 60)];
         
         [button2 setTitle: @"Water" forState: UIControlStateNormal];
         
@@ -53,10 +53,9 @@
         [button2 addTarget:self action:@selector(btn2Clicked:)
           forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button2];
+ 
         
-        
-        
-        UIButton *button3 = [[UIButton alloc] initWithFrame: CGRectMake(10, 160, 60, 60)];
+        UIButton *button3 = [[UIButton alloc] initWithFrame: CGRectMake(20, 158, 60, 60)];
         
         [button3 setTitle: @"Harvest" forState: UIControlStateNormal];
         [button3 setBackgroundColor:[UIColor redColor]];
@@ -65,7 +64,7 @@
           forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button3];
         
-        UIButton *button4 = [[UIButton alloc] initWithFrame: CGRectMake(10, 220, 60, 60)];
+        UIButton *button4 = [[UIButton alloc] initWithFrame: CGRectMake(20, 218, 60, 60)];
         
         [button4 setTitle: @"Store" forState: UIControlStateNormal];
         [button4 setBackgroundColor:[UIColor whiteColor]];
@@ -73,6 +72,13 @@
         [button4 addTarget:self action:@selector(btn4Clicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button4];
         
+        self.incomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 280,100, 20)];
+        
+        self.incomeLabel.font = [UIFont systemFontOfSize:12];
+        
+        self.incomeLabel.textAlignment = NSTextAlignmentCenter;
+        
+        [self addSubview:self.incomeLabel];
         
         
 
@@ -83,6 +89,8 @@
 
 -(void) showMenu {
     
+    self.incomeLabel.text = [NSString stringWithFormat:@"Income:$%li", (long)self.income];
+
     [UIView animateWithDuration:.25 animations:^{
         self.center = CGPointMake(self.frame.size.width/2, self.center.y);
     }];
