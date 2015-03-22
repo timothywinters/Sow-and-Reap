@@ -12,6 +12,8 @@ static int counter;
 @interface Tomato : plant
 @property int waterLevel;
 @property int stage;
+@property int health;
+
 
 -(void)seed_Stage;
 -(void)sprout_Stage;

@@ -15,7 +15,9 @@
         self = [Lettuce spriteNodeWithImageNamed:@"seeds.jpg"];
         self.name = @"Lettuce";
         self.waterLevel = 40;
+        self.health = 100;
         self.stage = 0;
+        counter = 0;
         self.waterDepletionRate = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:self.waterDepletionRate forMode:NSDefaultRunLoopMode];
     }
@@ -24,17 +26,20 @@
 
 -(void)timerRan {
     NSLog(@"%i",self.waterLevel);
+    counter++;
     self.waterLevel -= 10;
-    if(self.waterLevel >=110) {
+    if(self.health >=110) {
     self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"lettuce.jpg"]];
         NSLog(@"Your plant is doing well");
     }
-    if(self.waterLevel > 60 && self.waterLevel <100) {
+    if(self.health > 90 && self.stage >=0 ) {
         NSLog(@"Lettuce plant needs watering");
     self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"micro-greenery.jpg"]];
-    } else if (self.waterLevel <=20 && self.waterLevel > 0) {
+        self.stage =1;
+    } else if (self.waterLevel <=20 && self.health > 0) {
         NSLog(@"Lettuce plant is wilting");
-    } else if (self.waterLevel <=0){
+        self.health -=10;
+    } else if (self.health <=0){
         NSLog(@"Lettuce plant is dead");
         [self.waterDepletionRate invalidate];
     }

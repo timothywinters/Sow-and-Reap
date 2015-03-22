@@ -10,7 +10,9 @@
 
 @interface Lettuce : plant
 @property int waterLevel;
+static int counter;
 @property int stage;
+@property int health;
 -(void)seed_Stage;
 -(void)sprout_Stage;
 -(void)seedling_Stage;

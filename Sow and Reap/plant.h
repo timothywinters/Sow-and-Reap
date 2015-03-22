@@ -13,6 +13,8 @@
 @property NSTimer *GrowthRate;
 @property int waterLevel;
 @property int stage;
+@property int health;
+
 
 -(void)AddWater;
 -(void)Plant_Seeds;

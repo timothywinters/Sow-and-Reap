@@ -14,6 +14,7 @@
         self = [Tomato spriteNodeWithImageNamed:@"seeds.jpg"];
         self.name = @"Tomato";
         self.waterLevel = 60;
+        self.health = 100;
         self.stage = 0;
         counter = 0;
         self.waterDepletionRate = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];

@@ -12,6 +12,7 @@
 
 -(void)AddWater {
     self.waterLevel +=20;
+    self.health +=5;
     NSLog(@"water Level is %i", self.waterLevel);
 }
 
