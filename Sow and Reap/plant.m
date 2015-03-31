@@ -24,6 +24,7 @@
     NSLog(@"Harvesting plant");
 }
 
+int stage = 0;
 
 -(void)seed_Stage {
     

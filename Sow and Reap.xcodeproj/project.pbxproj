@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E104DA61AC0960600CDF57E /* Green.Tomato.Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E104DA01AC0960600CDF57E /* Green.Tomato.Border.png */; };
+		7E104DA71AC0960600CDF57E /* Green.Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E104DA11AC0960600CDF57E /* Green.Tomato.png */; };
+		7E104DA81AC0960600CDF57E /* Ripe.Tomato.Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E104DA21AC0960600CDF57E /* Ripe.Tomato.Border.png */; };
+		7E104DA91AC0960600CDF57E /* Ripe.Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E104DA31AC0960600CDF57E /* Ripe.Tomato.png */; };
+		7E104DAA1AC0960600CDF57E /* Seedling.Tomato.Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E104DA41AC0960600CDF57E /* Seedling.Tomato.Border.png */; };
+		7E104DAB1AC0960600CDF57E /* Seedling.Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E104DA51AC0960600CDF57E /* Seedling.Tomato.png */; };
 		84528E191AB232D400BF5943 /* PlantStatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84528E181AB232D400BF5943 /* PlantStatisticsView.m */; };
 		84528E1B1AB23A1400BF5943 /* gridPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 84528E1A1AB23A1400BF5943 /* gridPattern.png */; };
 		845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C0CDD1AA950FA00F7104D /* TopMenuView.m */; };
@@ -40,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E104DA01AC0960600CDF57E /* Green.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.Tomato.Border.png; sourceTree = "<group>"; };
+		7E104DA11AC0960600CDF57E /* Green.Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.Tomato.png; sourceTree = "<group>"; };
+		7E104DA21AC0960600CDF57E /* Ripe.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ripe.Tomato.Border.png; sourceTree = "<group>"; };
+		7E104DA31AC0960600CDF57E /* Ripe.Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ripe.Tomato.png; sourceTree = "<group>"; };
+		7E104DA41AC0960600CDF57E /* Seedling.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Seedling.Tomato.Border.png; sourceTree = "<group>"; };
+		7E104DA51AC0960600CDF57E /* Seedling.Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Seedling.Tomato.png; sourceTree = "<group>"; };
 		84528E171AB232D400BF5943 /* PlantStatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantStatisticsView.h; sourceTree = "<group>"; };
 		84528E181AB232D400BF5943 /* PlantStatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantStatisticsView.m; sourceTree = "<group>"; };
 		84528E1A1AB23A1400BF5943 /* gridPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gridPattern.png; sourceTree = "<group>"; };
@@ -115,6 +127,12 @@
 		980163DC1AA55FEC00E33629 /* Sow and Reap */ = {
 			isa = PBXGroup;
 			children = (
+				7E104DA01AC0960600CDF57E /* Green.Tomato.Border.png */,
+				7E104DA11AC0960600CDF57E /* Green.Tomato.png */,
+				7E104DA21AC0960600CDF57E /* Ripe.Tomato.Border.png */,
+				7E104DA31AC0960600CDF57E /* Ripe.Tomato.png */,
+				7E104DA41AC0960600CDF57E /* Seedling.Tomato.Border.png */,
+				7E104DA51AC0960600CDF57E /* Seedling.Tomato.png */,
 				845C0CDC1AA950FA00F7104D /* TopMenuView.h */,
 				845C0CDD1AA950FA00F7104D /* TopMenuView.m */,
 				845C0CDE1AA950FA00F7104D /* SideMenuView.h */,
@@ -254,12 +272,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E104DA71AC0960600CDF57E /* Green.Tomato.png in Resources */,
+				7E104DAB1AC0960600CDF57E /* Seedling.Tomato.png in Resources */,
+				7E104DA61AC0960600CDF57E /* Green.Tomato.Border.png in Resources */,
 				980163F31AA55FEC00E33629 /* LaunchScreen.xib in Resources */,
 				9845F6981AA565370084C66B /* lettuce.jpg in Resources */,
+				7E104DA81AC0960600CDF57E /* Ripe.Tomato.Border.png in Resources */,
 				980163F01AA55FEC00E33629 /* Images.xcassets in Resources */,
 				980163E81AA55FEC00E33629 /* GameScene.sks in Resources */,
 				9845F69A1AA565370084C66B /* tomato.jpg in Resources */,
+				7E104DA91AC0960600CDF57E /* Ripe.Tomato.png in Resources */,
 				9845F6991AA565370084C66B /* seeds.jpg in Resources */,
+				7E104DAA1AC0960600CDF57E /* Seedling.Tomato.Border.png in Resources */,
 				84528E1B1AB23A1400BF5943 /* gridPattern.png in Resources */,
 				980163EE1AA55FEC00E33629 /* Main.storyboard in Resources */,
 			);

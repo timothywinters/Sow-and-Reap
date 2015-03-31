@@ -12,6 +12,11 @@
 #import "SideMenuView.h"
 #import "TopMenuView.h"
 #import "StoreMenuView.h"
+#import "plant.h"
+
+static const NSInteger NumColumns = 9;
+static const NSInteger NumRows = 9;
+
 @interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate, StoreMenuDelegate> {
     
     SideMenuView *sideMenuView;
@@ -25,6 +30,9 @@
 @property int waterLevel;
 @property (nonatomic, strong) NSMutableArray *plants;
 @property int Money;
+
+- (plant *)plantInSquare:(NSInteger)column row:(NSInteger)row;
+
 
 
 @end

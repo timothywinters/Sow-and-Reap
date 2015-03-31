@@ -7,9 +7,14 @@
 //
 
 #import "GameScene.h"
+#import "plant.h"
 #import "StoreMenuView.h"
 @implementation GameScene
+
 -(id)initWithSize:(CGSize)size {
+    
+    plant *plants[NumColumns][NumRows];
+
     if (self = [super initWithSize:size]){
         
         self.tomato_seeds = 5;
@@ -157,20 +162,22 @@
                 switch (self.plant_Type) {
                     case 0:
                     {
-                        Tomato *tomato = [Tomato new];
-                        tomato.position = location;
-                        self.tomato_seeds -=1;
-                        self.mode = -1;
-                        [self addChild:tomato];
-                    }
-                        break;
-                    case 1:
-                    {
                         Lettuce *lettuce = [Lettuce new];
                         lettuce.position = location;
                         self.lettuce_seeds -=1;
                         self.mode = -1;
                         [self addChild:lettuce];
+                                           }
+                        break;
+                    case 1:
+                    {
+                        Tomato *tomato = [Tomato new];
+                        tomato.position = location;
+                        self.tomato_seeds -=1;
+                        self.mode = -1;
+                        [self addChild:tomato];
+
+                        
                     }
                         break;
                     default:
@@ -249,9 +256,18 @@
         _lettuce_seeds +=1;
     _Money -=10;
         self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money]; }
+
     
     [storeMenuView HideStoreMenu ];
     storeMenuView = nil;
+
+    (plant *)plantInSquare:(NSInteger)column row:(NSInteger)row {
+        NSAssert1(column >=0 && column < NumColumns, @"Invalid column: %ld", (long)column);
+        NSAssert1(row >=0 && row < NumRows, @"Invalid rowL %ld", (long)row);
+        
+        return _plant[column][row];
+    }
+
 
 }
 

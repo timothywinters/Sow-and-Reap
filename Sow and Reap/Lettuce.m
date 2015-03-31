@@ -28,11 +28,11 @@
     NSLog(@"%i",self.waterLevel);
     counter++;
     self.waterLevel -= 10;
-    if(self.health >=110) {
+    if(self.health >=110 && counter >= 5) {
     self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"lettuce.jpg"]];
         NSLog(@"Your plant is doing well");
     }
-    if(self.health > 90 && self.stage >=0 ) {
+    if(self.health > 90) {
         NSLog(@"Lettuce plant needs watering");
     self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"micro-greenery.jpg"]];
         self.stage =1;

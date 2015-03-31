@@ -16,6 +16,9 @@
 @property int health;
 
 
+@property (assign, nonatomic) NSInteger column;
+@property (assign, nonatomic) NSInteger row;
+
 -(void)AddWater;
 -(void)Plant_Seeds;
 -(void)Harvest_Plant;
