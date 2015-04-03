@@ -43,7 +43,7 @@
         
         self.button2 = [[UIButton alloc] initWithFrame: CGRectMake(180, 40, 80, 80)];
         [self.button2.titleLabel setFont:[UIFont systemFontOfSize:10]];
-        [self.button2 setTitle: @"Tomatoe" forState: UIControlStateNormal];
+        [self.button2 setTitle: @"Tomato" forState: UIControlStateNormal];
         [self.button2 setBackgroundColor:[UIColor brownColor]];
 
         [self.button2 addTarget:self action:@selector(btn2Clicked:)
@@ -79,13 +79,11 @@
 -(void)btn1Clicked:(id)sender {
     [self.delegate didSelectPlantType:0];
     
-    //We need to set a variable to state we are in seed planting mode
 }
 
 -(void)btn2Clicked:(id)sender {
     [self.delegate didSelectPlantType:1];
 
-    //We need to set a variable to state we are in watering mode
 
 }
 

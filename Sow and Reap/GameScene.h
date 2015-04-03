@@ -14,8 +14,11 @@
 #import "StoreMenuView.h"
 #import "plant.h"
 
-static const NSInteger NumColumns = 9;
-static const NSInteger NumRows = 9;
+static const NSInteger NumColumns = 3;
+static const NSInteger NumRows = 3;
+
+static const CGFloat SquareHeight = 64.0;
+static const CGFloat SquareWidth = 64.0;
 
 @interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate, StoreMenuDelegate> {
     
@@ -23,6 +26,10 @@ static const NSInteger NumRows = 9;
     TopMenuView *topMenuView;
     StoreMenuView *storeMenuView;
 }
+@property (strong, nonatomic) SKNode *groundLayer;
+@property (strong, nonatomic) SKNode *plantsLayer;
+@property (strong, nonatomic) SKNode *gameLayer;
+
 @property (nonatomic) SKNode  *field;
 @property (nonatomic) Tomato *plant;
 @property (nonatomic) Lettuce *plant1;
@@ -30,14 +37,14 @@ static const NSInteger NumRows = 9;
 @property int waterLevel;
 @property (nonatomic, strong) NSMutableArray *plants;
 @property int Money;
+@property (assign, nonatomic) NSInteger column;
+@property (assign, nonatomic) NSInteger row;
 
 - (plant *)plantInSquare:(NSInteger)column row:(NSInteger)row;
 
-
+- (void)addSquares;
 
 @end
-
-//static NSString *const plantNodeName=@"movable";
 
 @interface GameScene()
 @property (nonatomic, strong) SKSpriteNode *background;

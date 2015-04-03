@@ -9,42 +9,44 @@
 #import "GameScene.h"
 #import "plant.h"
 #import "StoreMenuView.h"
+#import "PlantStatisticsView.h"
+
+
 @implementation GameScene
 
 -(id)initWithSize:(CGSize)size {
     
-    plant *plants[NumColumns][NumRows];
+  /*  plant *_plants[NumColumns][NumRows];
+     - (plant *)plantInSquare:(NSInteger)column row:(NSInteger)row {
+        NSAssert1(column >= 0 && column < NumColumns, @"Invalid column: %ld", (long)column);
+        NSAssert1(row >= 0 && row < NumRows, @"Invalid rowL %ld", (long)row);
+        
+        return _plant[column][row];
+    }*/
 
     if (self = [super initWithSize:size]){
+        self.gameLayer = [SKNode node];
+        [self addChild:self.gameLayer];
+        
+        CGPoint layerPosition = CGPointMake(-SquareWidth *NumColumns/2, -SquareHeight*NumRows/2);
+        
+        self.groundLayer = [SKNode node];
+        self.groundLayer.position = layerPosition;
+        [self.gameLayer addChild:self.groundLayer];
+        
         
         self.tomato_seeds = 5;
         self.lettuce_seeds = 5;
-     /*
-        SKLabelNode *menu = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        menu.text = @"Show Menu";
-        menu.name = @"menuLabel";
-        menu.fontSize = 28;
-        menu.position = CGPointMake(self.frame.size.width - menu.frame.size.width/2 - 10,self.frame.size.height - 40);
         
-        [self addChild:menu];
-        */
-        NSLog(@"Size: %@", NSStringFromCGSize(size));
+               NSLog(@"Size: %@", NSStringFromCGSize(size));
         _Money = 50;
         self.mode = -1;
         self.plant_Type = 0;
         self.plants = [NSMutableArray array];
         
-        /*
-        self.Income = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
-        self.Income.fontSize = 15;
-        self.Income.position = CGPointMake(480, 265);
-
-        [self addChild:self.Income];
-         */
         
-        self.backgroundColor = [SKColor colorWithRed:0.27 green:0.24 blue:0.13 alpha:1.0];
+        self.backgroundColor = [SKColor colorWithRed:0.27 green:0.18 blue:0.13 alpha:1.0];
         
         self.background = [SKSpriteNode spriteNodeWithImageNamed:@"gridPattern.png"];
         
@@ -55,7 +57,7 @@
         [self addChild:self.background];
         
     
-
+      
         
         
     }
@@ -97,29 +99,10 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         SKNode *touchedNode = [self nodeAtPoint:location];
-        //NSLog(@"%@", touchedNode);
         NSLog(@"%li", (long)self.mode);
         NSLog(@"%@", touchedNode);
         NSLog(@"%ld", (long)self.plant_Type);
-     /*
-        if ([touchedNode.name isEqualToString:@"menuLabel"]) {
-            if (topMenuView) {
-                [topMenuView hideMenu];
-            }
-            
-            if (!sideMenuView) {
-                sideMenuView = [[SideMenuView alloc] init];
-                sideMenuView.delegate = self;
-                [self.view addSubview:sideMenuView];
-                [sideMenuView showMenu];
-                
-            } else {
-                [sideMenuView hideMenu];
-                sideMenuView = nil;
-            }
-            
-        } else {
-       */
+   
         if (self.mode != -1) {
         
             if ([touchedNode.name isEqualToString:@"Lettuce"]) {
@@ -134,7 +117,7 @@
                     _Money +=10;
                     
                 }
-                
+        
                 if (self.mode ==0) {
                     Lettuce *lettuce = (Lettuce *)touchedNode;
                     [lettuce Plant_Seeds];
@@ -150,7 +133,9 @@
                     Tomato *tomato =(Tomato *)touchedNode;
                     [tomato Harvest_Plant];
                     tomato.removeFromParent;
-                    _Money +=20;
+                    if (tomato.stage ==4) {
+                     _Money +=20;
+                    }
                 }
                 if (self.mode ==0) {
                     Tomato *tomato = (Tomato *)touchedNode;
@@ -185,13 +170,10 @@
                 }
             }
             
-        } else {
-            
-            //Do something if mode = -1
         }
+    
     }
-        //self.Income.text = [NSString stringWithFormat:@"Current income is %i", _Money];
-   // }
+  
     
 }
 
@@ -228,9 +210,7 @@
             [storeMenuView HideStoreMenu];
             storeMenuView = nil;
         }
-    }
-    //NSLog(@"selected mode  %li", (long)mode);
-    
+    }    
 
 
 #pragma -mark
@@ -260,13 +240,6 @@
     
     [storeMenuView HideStoreMenu ];
     storeMenuView = nil;
-
-    (plant *)plantInSquare:(NSInteger)column row:(NSInteger)row {
-        NSAssert1(column >=0 && column < NumColumns, @"Invalid column: %ld", (long)column);
-        NSAssert1(row >=0 && row < NumRows, @"Invalid rowL %ld", (long)row);
-        
-        return _plant[column][row];
-    }
 
 
 }

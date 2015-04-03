@@ -11,7 +11,7 @@
 @implementation Tomato
 -(instancetype)init {
     if(self = [super init]) {
-        self = [Tomato spriteNodeWithImageNamed:@"seeds.jpg"];
+        self = [Tomato spriteNodeWithImageNamed:@"Sown.Tomato.png"];
         self.name = @"Tomato";
         self.waterLevel = 60;
         self.health = 100;
@@ -34,19 +34,23 @@
     }
     
     if(self.stage ==1 && counter >=4) {
-        self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"Seedling.Tomato.Border.png"]];
+        self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"Seedling.Tomato.png"]];
 
         self.stage++;
     }
     if(self.stage ==2 && counter >= 5) {
-        self.texture =[SKTexture textureWithImageNamed:@"Green.Tomato.Border.png"];
+        self.texture =[SKTexture textureWithImageNamed:@"Adult.Tomato.png"];
 
         self.stage++;
     }
     if(self.stage ==3 && counter >= 8) {
-        self.texture = [SKTexture textureWithImageNamed:@"Ripe.Tomato.Border.png"];
+        self.texture = [SKTexture textureWithImageNamed:@"Green.Tomato.png"];
         
         self.stage++;
+    }
+    
+    if (self.stage ==4 && counter >= 10) {
+        self.texture = [SKTexture textureWithImageNamed:@"Ripe.Tomato.png"];
     }
 
     if(self.waterLevel > 70) {
@@ -61,30 +65,6 @@
     }
 }
 
-
--(void)seed_Stage {
-    if (self.stage ==0) {
-
-    }
-        }
-
--(void)seedling_Stage {
-    if (self.stage ==1) {
-
-    }
-    }
-    
-
-
--(void)sprout_Stage {
-    if(self.stage ==2) {
-    }
-}
-
--(void)mature_Stage {
-    if(self.stage ==3) {
-    }
-}
 
 
 

@@ -12,7 +12,7 @@
 
 -(instancetype)init {
     if(self = [super init]) {
-        self = [Lettuce spriteNodeWithImageNamed:@"seeds.jpg"];
+        self = [Lettuce spriteNodeWithImageNamed:@"Sown.Tomato.png"];
         self.name = @"Lettuce";
         self.waterLevel = 40;
         self.health = 100;
@@ -29,12 +29,12 @@
     counter++;
     self.waterLevel -= 10;
     if(self.health >=110 && counter >= 5) {
-    self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"lettuce.jpg"]];
+    //self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"lettuce.jpg"]];
         NSLog(@"Your plant is doing well");
     }
     if(self.health > 90) {
         NSLog(@"Lettuce plant needs watering");
-    self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"micro-greenery.jpg"]];
+    //self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
         self.stage =1;
     } else if (self.waterLevel <=20 && self.health > 0) {
         NSLog(@"Lettuce plant is wilting");

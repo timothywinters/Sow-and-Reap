@@ -34,7 +34,7 @@
         
         [button1 setTitle: @"Seeds" forState: UIControlStateNormal];
         
-        [button1 setBackgroundColor:[UIColor blueColor]];
+        [button1 setBackgroundColor:[UIColor brownColor]];
         
         [button1 addTarget:self action:@selector(btn1Clicked:)
          forControlEvents:UIControlEventTouchUpInside];
@@ -48,7 +48,7 @@
         
         
         
-        [button2 setBackgroundColor:[UIColor brownColor]];
+        [button2 setBackgroundColor:[UIColor blueColor]];
 
         [button2 addTarget:self action:@selector(btn2Clicked:)
           forControlEvents:UIControlEventTouchUpInside];
@@ -58,6 +58,7 @@
         UIButton *button3 = [[UIButton alloc] initWithFrame: CGRectMake(20, 158, 60, 60)];
         
         [button3 setTitle: @"Harvest" forState: UIControlStateNormal];
+        button3.titleLabel.font = [UIFont systemFontOfSize:12];
         [button3 setBackgroundColor:[UIColor redColor]];
 
         [button3 addTarget:self action:@selector(btn3Clicked:)
