@@ -9,7 +9,6 @@
 #import "GameScene.h"
 #import "plant.h"
 #import "StoreMenuView.h"
-#import "PlantStatisticsView.h"
 
 
 @implementation GameScene
@@ -102,7 +101,8 @@
         NSLog(@"%li", (long)self.mode);
         NSLog(@"%@", touchedNode);
         NSLog(@"%ld", (long)self.plant_Type);
-   
+        plantStatsView;
+        
         if (self.mode != -1) {
         
             if ([touchedNode.name isEqualToString:@"Lettuce"]) {
@@ -243,6 +243,13 @@
 
 
 }
+
+#pragma -mark
+#pragma PlantStatisticsView delegate
+-(void)didSelectPlantInfo:(NSInteger)PlantInfo {
+    plantStatsView;
+}
+
 
 
 

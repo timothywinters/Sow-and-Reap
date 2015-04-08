@@ -13,6 +13,7 @@
 #import "TopMenuView.h"
 #import "StoreMenuView.h"
 #import "plant.h"
+#import "PlantStatisticsView.h"
 
 static const NSInteger NumColumns = 3;
 static const NSInteger NumRows = 3;
@@ -20,11 +21,12 @@ static const NSInteger NumRows = 3;
 static const CGFloat SquareHeight = 64.0;
 static const CGFloat SquareWidth = 64.0;
 
-@interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate, StoreMenuDelegate> {
+@interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate, StoreMenuDelegate, PlantStatisticsView> {
     
     SideMenuView *sideMenuView;
     TopMenuView *topMenuView;
     StoreMenuView *storeMenuView;
+    PlantStatisticsView *plantStatsView;
 }
 @property (strong, nonatomic) SKNode *groundLayer;
 @property (strong, nonatomic) SKNode *plantsLayer;
