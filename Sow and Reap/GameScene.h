@@ -15,12 +15,11 @@
 #import "plant.h"
 #import "PlantStatisticsView.h"
 
-static const NSInteger NumColumns = 3;
-static const NSInteger NumRows = 3;
+
 
 static const CGFloat SquareHeight = 64.0;
 static const CGFloat SquareWidth = 64.0;
-
+@class Background;
 @interface GameScene : SKScene <SideMenuDelegate, TopMenuDelegate, StoreMenuDelegate, PlantStatisticsView> {
     
     SideMenuView *sideMenuView;
@@ -29,8 +28,10 @@ static const CGFloat SquareWidth = 64.0;
     PlantStatisticsView *plantStatsView;
 }
 @property (strong, nonatomic) SKNode *groundLayer;
-@property (strong, nonatomic) SKNode *plantsLayer;
-@property (strong, nonatomic) SKNode *gameLayer;
+//@property (strong, nonatomic) SKNode *plantsLayer;
+//@property (strong, nonatomic) SKNode *gameLayer;
+@property (strong, nonatomic) Background  *screen;
+
 
 @property (nonatomic) SKNode  *field;
 @property (nonatomic) Tomato *plant;

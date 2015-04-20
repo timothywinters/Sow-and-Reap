@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E4B466B1ACE242300477031 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4B466A1ACE242300477031 /* Grid.m */; };
 		7E4B89EC1ACEE4B3009625A0 /* Adult.Tomato.Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B89E11ACEE4B3009625A0 /* Adult.Tomato.Border.png */; };
 		7E4B89ED1ACEE4B3009625A0 /* Adult.Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B89E21ACEE4B3009625A0 /* Adult.Tomato.png */; };
 		7E4B89EE1ACEE4B3009625A0 /* Green.Tomato.Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B89E31ACEE4B3009625A0 /* Green.Tomato.Border.png */; };
@@ -19,6 +18,8 @@
 		7E4B89F41ACEE4B3009625A0 /* Sown.Tomato.Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B89E91ACEE4B3009625A0 /* Sown.Tomato.Border.png */; };
 		7E4B89F51ACEE4B3009625A0 /* Sown.Tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B89EA1ACEE4B3009625A0 /* Sown.Tomato.png */; };
 		7E4B89F61ACEE4B3009625A0 /* Tomato.Plant.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B89EB1ACEE4B3009625A0 /* Tomato.Plant.png */; };
+		7EECB7491AE5674900A839DD /* Grid2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EECB7481AE5674900A839DD /* Grid2D.m */; };
+		7EECB74C1AE5684000A839DD /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EECB74B1AE5684000A839DD /* Background.m */; };
 		84528E191AB232D400BF5943 /* PlantStatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84528E181AB232D400BF5943 /* PlantStatisticsView.m */; };
 		84528E1B1AB23A1400BF5943 /* gridPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 84528E1A1AB23A1400BF5943 /* gridPattern.png */; };
 		845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C0CDD1AA950FA00F7104D /* TopMenuView.m */; };
@@ -49,8 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E4B466A1ACE242300477031 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
-		7E4B466C1ACE243B00477031 /* Grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = ../Grid.h; sourceTree = "<group>"; };
 		7E4B89E11ACEE4B3009625A0 /* Adult.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adult.Tomato.Border.png; sourceTree = "<group>"; };
 		7E4B89E21ACEE4B3009625A0 /* Adult.Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adult.Tomato.png; sourceTree = "<group>"; };
 		7E4B89E31ACEE4B3009625A0 /* Green.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.Tomato.Border.png; sourceTree = "<group>"; };
@@ -62,6 +61,11 @@
 		7E4B89E91ACEE4B3009625A0 /* Sown.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sown.Tomato.Border.png; sourceTree = "<group>"; };
 		7E4B89EA1ACEE4B3009625A0 /* Sown.Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sown.Tomato.png; sourceTree = "<group>"; };
 		7E4B89EB1ACEE4B3009625A0 /* Tomato.Plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tomato.Plant.png; sourceTree = "<group>"; };
+		7EECB7441AE565BD00A839DD /* Sow and Reap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sow and Reap-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EECB7471AE5674900A839DD /* Grid2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid2D.h; sourceTree = "<group>"; };
+		7EECB7481AE5674900A839DD /* Grid2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid2D.m; sourceTree = "<group>"; };
+		7EECB74A1AE5684000A839DD /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		7EECB74B1AE5684000A839DD /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
 		84528E171AB232D400BF5943 /* PlantStatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantStatisticsView.h; sourceTree = "<group>"; };
 		84528E181AB232D400BF5943 /* PlantStatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantStatisticsView.m; sourceTree = "<group>"; };
 		84528E1A1AB23A1400BF5943 /* gridPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gridPattern.png; sourceTree = "<group>"; };
@@ -116,9 +120,14 @@
 		980163D11AA55FEC00E33629 = {
 			isa = PBXGroup;
 			children = (
+				7EECB74A1AE5684000A839DD /* Background.h */,
+				7EECB74B1AE5684000A839DD /* Background.m */,
+				7EECB7471AE5674900A839DD /* Grid2D.h */,
+				7EECB7481AE5674900A839DD /* Grid2D.m */,
 				980163DC1AA55FEC00E33629 /* Sow and Reap */,
 				980163FB1AA55FEC00E33629 /* Sow and ReapTests */,
 				980163DB1AA55FEC00E33629 /* Products */,
+				7EECB7441AE565BD00A839DD /* Sow and Reap-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,8 +180,6 @@
 				985D94141AAE52910015B0CD /* StoreMenuView.m */,
 				84528E171AB232D400BF5943 /* PlantStatisticsView.h */,
 				84528E181AB232D400BF5943 /* PlantStatisticsView.m */,
-				7E4B466C1ACE243B00477031 /* Grid.h */,
-				7E4B466A1ACE242300477031 /* Grid.m */,
 			);
 			path = "Sow and Reap";
 			sourceTree = "<group>";
@@ -319,15 +326,16 @@
 				980163EB1AA55FEC00E33629 /* GameViewController.m in Sources */,
 				9845F69C1AA565370084C66B /* Tomato.m in Sources */,
 				9845F69D1AA565370084C66B /* Lettuce.m in Sources */,
+				7EECB74C1AE5684000A839DD /* Background.m in Sources */,
 				845C0CE01AA950FA00F7104D /* TopMenuView.m in Sources */,
 				84528E191AB232D400BF5943 /* PlantStatisticsView.m in Sources */,
 				980163E31AA55FEC00E33629 /* AppDelegate.m in Sources */,
 				985D94151AAE52910015B0CD /* StoreMenuView.m in Sources */,
-				7E4B466B1ACE242300477031 /* Grid.m in Sources */,
 				845C0CE11AA950FA00F7104D /* SideMenuView.m in Sources */,
 				980163E61AA55FEC00E33629 /* GameScene.m in Sources */,
 				980163E01AA55FEC00E33629 /* main.m in Sources */,
 				9845F69B1AA565370084C66B /* plant.m in Sources */,
+				7EECB7491AE5674900A839DD /* Grid2D.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,9 +459,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sow and Reap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sow and Reap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -461,9 +472,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sow and Reap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sow and Reap-Bridging-Header.h";
 			};
 			name = Release;
 		};

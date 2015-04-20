@@ -9,20 +9,35 @@
 #import "GameScene.h"
 #import "plant.h"
 #import "StoreMenuView.h"
+#import "Background.h"
+#import "Grid2D.h"
 
+static const CGFloat TileWidth = 64.0;
+static const CGFloat TileHeight = 64;
+
+@interface GameScene ()
+
+@property (strong, nonatomic) SKNode *gameLayer;
+@property (strong, nonatomic) SKNode *plantsLayer;
+
+@end
 
 @implementation GameScene
 
--(id)initWithSize:(CGSize)size {
-    
-  /*  plant *_plants[NumColumns][NumRows];
-     - (plant *)plantInSquare:(NSInteger)column row:(NSInteger)row {
-        NSAssert1(column >= 0 && column < NumColumns, @"Invalid column: %ld", (long)column);
-        NSAssert1(row >= 0 && row < NumRows, @"Invalid rowL %ld", (long)row);
-        
-        return _plant[column][row];
-    }*/
 
+
+-(id)initWithSize:(CGSize)size {
+    self.gameLayer = [SKNode node];
+    //[self addChild:self.gameLayer];
+    CGPoint layerPosition = CGPointMake(-TileWidth*NumColumns/2, -TileHeight*NumRows/2);
+    
+    self.plantsLayer = [SKNode node];
+    self.plantsLayer.position = layerPosition;
+    
+    //[self.gameLayer addChild:self.plantsLayer];
+    
+    
+    
     if (self = [super initWithSize:size]){
         self.gameLayer = [SKNode node];
         [self addChild:self.gameLayer];
@@ -65,10 +80,21 @@
 
 -(void)didMoveToView:(SKView *)view {
     
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showMenu)];
-      swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showMenu)];
+      swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     
-    [view addGestureRecognizer:swipe];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(hideMenu)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    
+    [view addGestureRecognizer:swipeRight];
+    [view addGestureRecognizer:swipeLeft];
+}
+
+-(void) hideMenu {
+    if (sideMenuView !=nil) {
+        [sideMenuView hideMenu];
+    }
 }
 
 -(void) showMenu {
