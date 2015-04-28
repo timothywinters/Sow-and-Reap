@@ -11,6 +11,7 @@
 #import "StoreMenuView.h"
 #import "Background.h"
 #import "Grid2D.h"
+#import "PlantStatisticsView.h"
 
 static const CGFloat TileWidth = 64.0;
 static const CGFloat TileHeight = 64;
@@ -25,7 +26,6 @@ static const CGFloat TileHeight = 64;
 @implementation GameScene
 
 
-
 -(id)initWithSize:(CGSize)size {
     self.gameLayer = [SKNode node];
     //[self addChild:self.gameLayer];
@@ -35,8 +35,7 @@ static const CGFloat TileHeight = 64;
     self.plantsLayer.position = layerPosition;
     
     //[self.gameLayer addChild:self.plantsLayer];
-    
-    
+
     
     if (self = [super initWithSize:size]){
         self.gameLayer = [SKNode node];

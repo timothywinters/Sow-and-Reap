@@ -61,7 +61,6 @@
 		7E4B89E91ACEE4B3009625A0 /* Sown.Tomato.Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sown.Tomato.Border.png; sourceTree = "<group>"; };
 		7E4B89EA1ACEE4B3009625A0 /* Sown.Tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sown.Tomato.png; sourceTree = "<group>"; };
 		7E4B89EB1ACEE4B3009625A0 /* Tomato.Plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tomato.Plant.png; sourceTree = "<group>"; };
-		7EECB7441AE565BD00A839DD /* Sow and Reap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sow and Reap-Bridging-Header.h"; sourceTree = "<group>"; };
 		7EECB7471AE5674900A839DD /* Grid2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid2D.h; sourceTree = "<group>"; };
 		7EECB7481AE5674900A839DD /* Grid2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid2D.m; sourceTree = "<group>"; };
 		7EECB74A1AE5684000A839DD /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 				980163DC1AA55FEC00E33629 /* Sow and Reap */,
 				980163FB1AA55FEC00E33629 /* Sow and ReapTests */,
 				980163DB1AA55FEC00E33629 /* Products */,
-				7EECB7441AE565BD00A839DD /* Sow and Reap-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};

@@ -33,7 +33,7 @@
         self.button1 = [[UIButton alloc] initWithFrame: CGRectMake(40, 40, 80, 80)];
         [self.button1.titleLabel setFont:[UIFont systemFontOfSize:10]];
         [self.button1 setTitle: @"Lettuce" forState: UIControlStateNormal];
-        [self.button1 setBackgroundColor:[UIColor blueColor]];
+        [self.button1 setBackgroundColor:[UIColor greenColor]];
         
         [self.button1 addTarget:self action:@selector(btn1Clicked:)
          forControlEvents:UIControlEventTouchUpInside];
@@ -44,7 +44,7 @@
         self.button2 = [[UIButton alloc] initWithFrame: CGRectMake(180, 40, 80, 80)];
         [self.button2.titleLabel setFont:[UIFont systemFontOfSize:10]];
         [self.button2 setTitle: @"Tomato" forState: UIControlStateNormal];
-        [self.button2 setBackgroundColor:[UIColor brownColor]];
+        [self.button2 setBackgroundColor:[UIColor redColor]];
 
         [self.button2 addTarget:self action:@selector(btn2Clicked:)
           forControlEvents:UIControlEventTouchUpInside];

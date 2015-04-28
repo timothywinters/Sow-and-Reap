@@ -30,6 +30,7 @@
 
 @implementation GameViewController
 
+
 -(void)viewDidLoad {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(Show_Levels:) name:@"waterLevel" object:nil];
 }
@@ -61,6 +62,9 @@
     return YES;
 }
 
+
+
+
 - (NSUInteger)supportedInterfaceOrientations
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -81,3 +85,24 @@
 }
 
 @end
+
+
+/* -(IBAction)startLocalNotification { 
+    NSLog(@"startLocalNotification");
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:7];
+    notification.alertBody = @"This is local notification!";
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    notification.applicationIconBadgeNumber = 10;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        
+        [application registerUserNotificationSettings:[UIUserNotificationSettings
+                                                       settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|
+                                                       UIUserNotificationTypeSound categories:nil]];
+    }
+} */

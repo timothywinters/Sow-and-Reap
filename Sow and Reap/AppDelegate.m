@@ -16,8 +16,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [launchOptions valueForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     // Override point for customization after application launch.
     return YES;
+}
+
+// This code block is invoked when application is in foreground (active-mode)
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+    UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Notification"    message:@"This local notification"
+                                                               delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    
+    [notificationAlert show];
+    // NSLog(@"didReceiveLocalNotification");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

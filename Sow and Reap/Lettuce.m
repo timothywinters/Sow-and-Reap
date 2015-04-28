@@ -18,30 +18,60 @@
         self.health = 100;
         self.stage = 0;
         counter = 0;
-        self.waterDepletionRate = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
-        [[NSRunLoop mainRunLoop] addTimer:self.waterDepletionRate forMode:NSDefaultRunLoopMode];
+        
+        SKAction *wait = [SKAction waitForDuration:10];
+        SKAction *performSelector = [SKAction performSelector:@selector(timerRan) onTarget:self];
+        SKAction *sequence = [SKAction sequence:@[performSelector, wait]];
+        SKAction *repeat   = [SKAction repeatActionForever:sequence];
+        [self runAction:repeat withKey:@"plant_Cycle"];
     }
+    
     return self;
 }
 
+
 -(void)timerRan {
-    NSLog(@"%i",self.waterLevel);
-    counter++;
+    NSLog(@"Water Level is %i",self.waterLevel);
+    NSLog(@"Health is %i", self.health);
     self.waterLevel -= 10;
-    if(self.health >=110 && counter >= 5) {
-    //self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"lettuce.jpg"]];
-        NSLog(@"Your plant is doing well");
+    NSLog(@"counter is %i", counter);
+    counter++;
+    if( self.stage ==0 && counter >= 2) {
+        self.stage = 1;
     }
-    if(self.health > 90) {
-        NSLog(@"Lettuce plant needs watering");
-    //self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
-        self.stage =1;
-    } else if (self.waterLevel <=20 && self.health > 0) {
-        NSLog(@"Lettuce plant is wilting");
+    
+    if(self.stage ==1 && counter >=4) {
+        self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
+        
+        self.stage++;
+    }
+    if(self.stage ==2 && counter >= 5) {
+        self.texture =[SKTexture textureWithImageNamed:@""];
+        
+        self.stage++;
+    }
+    if(self.stage ==3 && counter >= 8) {
+        self.texture = [SKTexture textureWithImageNamed:@""];
+        
+        self.stage++;
+    }
+    
+    if (self.stage ==4 && counter >= 10) {
+        self.texture = [SKTexture textureWithImageNamed:@""];
+    }
+    
+    if(self.waterLevel >= 70) {
+        NSLog(@"Lettuce plant needs water");
         self.health -=10;
-    } else if (self.health <=0){
+    } else if (self.waterLevel <=30 && self.waterLevel >= 1) {
+        NSLog(@"Lettuce plant is wilting");
+        self.health -=20;
+        //} else if (self.waterLevel <= 0) {
+        //  self.health -=30;
+    } else if (self.health <=0) {
         NSLog(@"Lettuce plant is dead");
-        [self.waterDepletionRate invalidate];
+        [self removeActionForKey:@"plant_Cycle"];
+        [self removeFromParent];
     }
 }
 
@@ -60,6 +90,5 @@
 -(void)mature_Stage {
     
 }
-
 
 @end

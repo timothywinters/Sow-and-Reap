@@ -7,27 +7,32 @@
 //
 
 #import "Tomato.h"
-
 @implementation Tomato
 -(instancetype)init {
     if(self = [super init]) {
         self = [Tomato spriteNodeWithImageNamed:@"Sown.Tomato.png"];
         self.name = @"Tomato";
-        self.waterLevel = 60;
-        self.health = 100;
+        self.waterLevel = 30;
+        self.health = 10;
         self.stage = 0;
         counter = 0;
-        self.waterDepletionRate = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(timerRan) userInfo:nil repeats:YES];
-               [[NSRunLoop mainRunLoop] addTimer:self.waterDepletionRate forMode:NSDefaultRunLoopMode];
-            }
+        
+        SKAction *wait = [SKAction waitForDuration:10];
+        SKAction *performSelector = [SKAction performSelector:@selector(timerRan) onTarget:self];
+        SKAction *sequence = [SKAction sequence:@[performSelector, wait]];
+        SKAction *repeat   = [SKAction repeatActionForever:sequence];
+        [self runAction:repeat withKey:@"Cycle1"];
+        }
+    
     return self;
-}
+    }
+
 
 -(void)timerRan {
-    NSLog(@"%i",self.waterLevel);
+    NSLog(@"Water Level is %i",self.waterLevel);
+    NSLog(@"Health is %i", self.health);
     self.waterLevel -= 10;
-    self.health +=5;
-    NSLog(@"%i", counter);
+    NSLog(@"counter is %i", counter);
     counter++;
     if( self.stage ==0 && counter >= 2) {
         self.stage = 1;
@@ -53,24 +58,36 @@
         self.texture = [SKTexture textureWithImageNamed:@"Ripe.Tomato.png"];
     }
 
-    if(self.waterLevel > 70) {
+    if(self.waterLevel >= 70) {
         NSLog(@"Tomato plant needs water");
         self.health -=10;
-    } else if (self.waterLevel <=30 && self.waterLevel > 0) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"waterLevel" object:self];
+    } else if (self.waterLevel <=30 && self.waterLevel >= 1) {
+        NSLog(@"Tomato plant is wilting");
         self.health -=20;
-    } else if (self.health <=0){
+    //} else if (self.waterLevel <= 0) {
+      //  self.health -=30;
+    } else if (self.health <=0) {
         NSLog(@"Tomato plant is dead");
-        [self.waterDepletionRate invalidate];
+        [self removeActionForKey:@"Cycle1"];
+        [self removeFromParent];
     }
 }
 
+-(void)seed_Stage {
+    
+}
 
+-(void)seedling_Stage {
+    
+}
 
+-(void)sprout_Stage {
+    
+}
 
-
-
-
+-(void)mature_Stage {
+    
+}
 
 
 
