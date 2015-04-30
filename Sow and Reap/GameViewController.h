@@ -11,4 +11,6 @@
 
 @interface GameViewController : UIViewController
 
+@property(nonatomic, copy) NSArray *scheduledLocalNotifications;
+
 @end

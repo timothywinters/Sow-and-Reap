@@ -199,6 +199,40 @@ static const CGFloat TileHeight = 64;
     
     }
   
+    //    - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
+//    {
+//        dragObject = sender;
+//        originalPosition = [self getButton:sender];
+//        
+//        UITouch *touch = [[event allTouches] anyObject];
+//        
+//        point = [touch locationInView:dragObject];
+//        
+//        float step = 31.0; // Grid step size.
+//        CGPoint center = dragObject.center;
+//        center.x += step * floor((point.x / step));
+//        center.y += step * floor((point.y / step));
+//        
+//        dragObject.center = center;
+//        
+//        [sender addTarget:self action:@selector(touchesEnded:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+//        
+//    }
+//    
+//    - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//    {
+//        if (![fieldView pointInside:dragObject.center withEvent:nil])
+//        {
+//            [UIView animateWithDuration:0.4
+//                                  delay:0.0
+//                                options:UIViewAnimationOptionCurveEaseInOut
+//                             animations:^ {
+//                                 dragObject.center = CGPointMake(originalPosition.x + 15.5, originalPosition.y + 15.5);
+//                             }
+//                             completion:^(BOOL finished) {}];
+//        }
+//    }
+//    
     
 }
 

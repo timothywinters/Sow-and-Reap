@@ -41,7 +41,7 @@
     }
     
     if(self.stage ==1 && counter >=4) {
-        self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
+        self.texture = [SKTexture textureWithImage:[UIImage imageNamed:@"Seedling.Lettuce.png"]];
         
         self.stage++;
     }
@@ -57,7 +57,7 @@
     }
     
     if (self.stage ==4 && counter >= 10) {
-        self.texture = [SKTexture textureWithImageNamed:@""];
+        self.texture = [SKTexture textureWithImageNamed:@"Ripe.Lettuce.png"];
     }
     
     if(self.waterLevel >= 70) {

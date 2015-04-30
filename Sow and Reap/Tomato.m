@@ -10,6 +10,7 @@
 @implementation Tomato
 -(instancetype)init {
     if(self = [super init]) {
+
         self = [Tomato spriteNodeWithImageNamed:@"Sown.Tomato.png"];
         self.name = @"Tomato";
         self.waterLevel = 30;
@@ -59,7 +60,13 @@
     }
 
     if(self.waterLevel >= 70) {
-        NSLog(@"Tomato plant needs water");
+        
+        
+        
+        
+        
+        
+        
         self.health -=10;
     } else if (self.waterLevel <=30 && self.waterLevel >= 1) {
         NSLog(@"Tomato plant is wilting");
